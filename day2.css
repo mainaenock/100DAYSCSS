@@ -1,3 +1,61 @@
 .container{
-    
+    width: 350px;
+    height: 350px;
+    background-color: rgb(60, 173, 117);
+    border-radius: 10px;
+    display: flex;
+    position: relative;
 }
+.bars{
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    flex-direction: column;
+}
+.bar{
+    width: 120px;
+    height: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.bar{
+    animation-play-state: paused;
+
+}
+.bars:active > .bar{
+    animation-duration: 1s;
+    animation-play-state: running;
+  }
+.top{
+    animation-name: top;
+    animation-duration: 1s;
+}
+.middle{
+    animation-name: middle;
+    animation-duration: 1s;
+}
+.bottom{
+    animation-name: bottom;
+    animation-duration: 1s;
+}
+@keyframes top{
+    100%{
+        transform: rotate(45deg);
+        margin-bottom: -25px;
+    }
+}
+@keyframes middle {
+    100%{
+        scale: 0;
+    }
+}
+@keyframes bottom {
+    100%{
+        transform: rotate(-45deg);
+        margin-top: -25px;
+    }
+}
+
